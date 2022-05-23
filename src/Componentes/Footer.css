@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive&family=Righteous&family=Roboto:ital,wght@0,400;0,700;1,400&display=swap');
+.container-footer {
+    bottom: 0px;
+    left: 0px;
+    position: fixed;
+    width: 100%;
+    background: #DFE6ED;
+    border: 1px solid #9EADBA;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: 'Recursive', sans-serif;;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 30px;
+}

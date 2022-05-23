@@ -1,0 +1,12 @@
+.movies{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+img{
+    margin: 10px 20px;
+}
+button{
+    border: 0px;
+}

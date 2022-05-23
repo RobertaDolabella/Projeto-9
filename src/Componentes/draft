@@ -1,0 +1,110 @@
+      <Route path="/filme/:idMovie" element={< TimeSheet />}/>
+            <Route path='/sessao/:idTime ' element={< Seats />}/>
+            <Route path='/sucesso' element={< Finish />}/>
+
+
+
+
+        AuxList = AuxList.map((value, i)=>{
+        return{
+            ...value, 
+            index: {i}
+        }
+        })
+        setSeatlist([...AuxList])
+function SeatStatus(element, index){
+
+
+      AuxList = AuxList.map((value, i)=>{
+            return{
+                ...value, 
+                index: {i}
+            }
+            })
+            setSeatlist([...AuxList])
+
+            function SelectSeat(element){
+                  let index = element.index
+                  console.log(index)
+                  AuxList.map((e,i)=>{
+                      if(index===i){
+                          return{
+                              ... e,
+                          isAvailable: "selected"
+                          }
+                      }
+                  })
+                  setSeatlist([...AuxList])
+                  console.log(seatlist)
+              }
+              function unselect(index){
+                  AuxList.map((e,i)=>{
+                      if(index===i){
+                          return{
+                          ...e,
+                          isAvailable: true
+                          }
+                      }
+                  })
+                  setSeatlist([...AuxList])
+              }
+
+
+
+    useEffect(() => {
+      const promisseSeats = axios.get(`https://mock-api.driven.com.br/api/v5/cineflex/showtimes/${timeid}/seats`)
+      promisseSeats.then(response => {
+          setSeatlist(response.data.seats);
+      });
+
+  }, [])
+
+  AuxList = AuxList.map((value, i) => {
+      return {
+          ...value,
+          index: { i }
+      }
+  })
+
+
+
+
+  function SelectSeat(element){
+    let index = element.index
+    chosenseats.push(element.name)
+    console.log(index)
+    listaAux.map((e,i)=>{
+        if(index===i){
+            return{
+            ...e,
+            isAvailable: "selected",
+            }
+        }
+    })
+    {seatlist.filter((seats)=>{
+        if(seats.isAvailable==="selected"){
+            return(<h3>Assento {seats.name}</h3>)
+        }
+    })}
+
+    function filledform(){
+        const userinfo = [{
+            ids: {chosenseats},
+            name,
+            cpf
+        }]
+    
+    }]
+
+    chosenseats.push(element.name)
+        listaAux.map((e,i)=>{
+            if(e.name===element.name){
+                return{
+                ...e,
+                isAvailable: "selected",
+                }
+            }
+        })
+
+        setSeatlist([...listaAux])
+        console.log(seatlist)
